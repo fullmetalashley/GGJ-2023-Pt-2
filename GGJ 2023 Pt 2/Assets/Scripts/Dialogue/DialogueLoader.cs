@@ -92,6 +92,7 @@ public class DialogueLoader : MonoBehaviour
             }
             //If childDivider is still 0, that means we do not have children.
 
+            Debug.Log("Current key: " + cleanDummy[0]);
             //First, send in the dialogue. Return an array of cleaned up sentences.
             string[] sentences = ProcessDialogueSentences(cleanDummy, childDivider);
             

@@ -12,6 +12,15 @@ public class DialogueTrigger : MonoBehaviour
     public bool autoDialogue;
 
     public float delayTime;
+
+    public bool sceneTrigger;
+
+    private DialogueManager theDialogue;
+
+    void Awake()
+    {
+        theDialogue = FindObjectOfType<DialogueManager>();
+    }
     
     public void SetTrigger()
     {
@@ -20,7 +29,8 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+        theDialogue.StartDialogue(dialogue);
+        theDialogue.loadNextScene = sceneTrigger;
     }
 
     public void AutoRun()

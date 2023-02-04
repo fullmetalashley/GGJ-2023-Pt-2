@@ -10,6 +10,7 @@ public class DialogueManager : MonoBehaviour
     private Queue<string> sentences;
     public Dialogue currentDialogue;
     public bool dialogueActive;
+    public bool loadNextScene;
 
     [Header("Animators")]
     public Animator animator;
@@ -145,7 +146,10 @@ public class DialogueManager : MonoBehaviour
             blockerDialogue.SetActive(false);
             dialogueActive = false;
 
-            //StartCoroutine(DelaySceneLoad());
+            if (loadNextScene)
+            {
+                StartCoroutine(DelaySceneLoad());
+            }
         }
     }
 
@@ -155,6 +159,6 @@ public class DialogueManager : MonoBehaviour
         sceneFade.SetBool("changeScene", true);
 
         yield return new WaitForSeconds(2f);
-        //this.GetComponent<LoadScene>().Load();
+        this.GetComponent<LoadScene>().Load();
     }
 }
