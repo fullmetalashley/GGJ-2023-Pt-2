@@ -145,14 +145,15 @@ public class DialogueManager : MonoBehaviour
             blockerDialogue.SetActive(false);
             dialogueActive = false;
 
-            sceneFade.SetBool("changeScene", true);
-            StartCoroutine(DelaySceneLoad());
+            //StartCoroutine(DelaySceneLoad());
         }
     }
 
     //Utilize this when moving to a new scene. Might not want it to be auto though. 
     IEnumerator DelaySceneLoad()
     {
+        sceneFade.SetBool("changeScene", true);
+
         yield return new WaitForSeconds(2f);
         //this.GetComponent<LoadScene>().Load();
     }
