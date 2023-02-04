@@ -27,6 +27,7 @@ public class DialogueManager : MonoBehaviour
     public List<GameObject> choiceButtons;
     public List<TextMeshProUGUI> choiceText;
 
+    [Header("Scene Fade")] public Animator sceneFade;
 
     // Start is called before the first frame update
     void Start()
@@ -144,6 +145,7 @@ public class DialogueManager : MonoBehaviour
             blockerDialogue.SetActive(false);
             dialogueActive = false;
 
+            sceneFade.SetBool("changeScene", true);
             StartCoroutine(DelaySceneLoad());
         }
     }
