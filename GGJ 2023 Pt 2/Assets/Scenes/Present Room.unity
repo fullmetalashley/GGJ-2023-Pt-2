@@ -2125,7 +2125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 271e0a3695871ca4790afe1d0d2d5c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueKey: TestKey1
+  dialogueKey: Present Scene 1 Player 1
   dialogue:
     name: 
     sentences: []
@@ -2134,7 +2134,7 @@ MonoBehaviour:
     children: []
     stat: []
     statValue: 
-  autoDialogue: 0
+  autoDialogue: 1
   delayTime: 0.5
   sceneTrigger: 0
 --- !u!4 &1016445904
