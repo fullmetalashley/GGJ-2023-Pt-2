@@ -113,11 +113,18 @@ public class DialogueManager : MonoBehaviour
 
     public void ProcessNextDialogue(int index)
     {
-        string newKey = currentDialogue.children[index];
-        Dialogue nextDialogue = FindObjectOfType<DialogueLoader>().SetDialogue(newKey);
+        if (currentDialogue.children != null)
+        {
+            string newKey = currentDialogue.children[index];
+            Dialogue nextDialogue = FindObjectOfType<DialogueLoader>().SetDialogue(newKey);
 
-        currentDialogue = nextDialogue;
-        StartDialogue(nextDialogue);
+            currentDialogue = nextDialogue;
+            StartDialogue(nextDialogue);
+        }
+        else
+        {
+            EndDialogue();
+        }
     }
 
     public void EndDialogue()

@@ -10,7 +10,6 @@ public class DialogueTrigger : MonoBehaviour
 
     public void SetTrigger()
     {
-        Debug.Log("Trigger set");
         dialogue = FindObjectOfType<DialogueLoader>().SetDialogue(dialogueKey);
     }
 
