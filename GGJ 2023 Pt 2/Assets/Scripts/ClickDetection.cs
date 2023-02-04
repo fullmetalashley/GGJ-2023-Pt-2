@@ -4,20 +4,25 @@ using UnityEngine;
 
 public class ClickDetection : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private DialogueManager theDialogue;
+    private DialogueTrigger trigger;
+    
+    public void Start()
     {
-        
+        theDialogue = FindObjectOfType<DialogueManager>();
+        trigger = this.gameObject.GetComponent<DialogueTrigger>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    
     void OnMouseDown()
     {
-        Debug.Log("You clicked me!");
+        if (theDialogue.dialogueActive) return;
+        if (trigger != null)
+        {
+            trigger.TriggerDialogue();
+        }
+        else
+        {
+            Debug.LogError("No dialog attached to this object!");
+        }
     }
 }

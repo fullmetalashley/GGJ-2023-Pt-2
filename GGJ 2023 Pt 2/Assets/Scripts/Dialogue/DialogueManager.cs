@@ -9,6 +9,7 @@ public class DialogueManager : MonoBehaviour
     //List of sentences to display in the current dialogue.
     private Queue<string> sentences;
     public Dialogue currentDialogue;
+    public bool dialogueActive;
 
     [Header("Animators")]
     public Animator animator;
@@ -35,6 +36,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        dialogueActive = true;
         currentDialogue = dialogue;
 
         animator.SetBool("isOpen", true);
@@ -140,11 +142,13 @@ public class DialogueManager : MonoBehaviour
             currentDialogue = null;
             animator.SetBool("isOpen", false);
             blockerDialogue.SetActive(false);
+            dialogueActive = false;
 
             StartCoroutine(DelaySceneLoad());
         }
     }
 
+    //Utilize this when moving to a new scene. Might not want it to be auto though. 
     IEnumerator DelaySceneLoad()
     {
         yield return new WaitForSeconds(2f);
