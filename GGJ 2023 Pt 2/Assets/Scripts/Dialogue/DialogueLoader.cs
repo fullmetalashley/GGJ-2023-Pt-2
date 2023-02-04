@@ -31,6 +31,8 @@ public class DialogueLoader : MonoBehaviour
     {
         ParseKeys();
         SetAllTriggers();
+        
+        //Also at this point, search for any auto running dialogue.
     }
 
     public void SetAllTriggers()
@@ -40,6 +42,15 @@ public class DialogueLoader : MonoBehaviour
         {
             
             trigger.SetTrigger();
+        }
+
+        foreach (DialogueTrigger trigger in allTriggers)
+        {
+            if (trigger.autoDialogue)
+            {
+                //Run this one NOW.
+                trigger.AutoRun();
+            }
         }
     }
 

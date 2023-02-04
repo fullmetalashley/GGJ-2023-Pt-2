@@ -139,7 +139,7 @@ public class DialogueManager : MonoBehaviour
         {
             currentDialogue = null;
             animator.SetBool("isOpen", false);
-            blockerDialogue.SetActive(true);
+            blockerDialogue.SetActive(false);
 
             StartCoroutine(DelaySceneLoad());
         }
