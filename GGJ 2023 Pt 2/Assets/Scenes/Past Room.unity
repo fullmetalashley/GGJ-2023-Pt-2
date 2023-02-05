@@ -866,7 +866,6 @@ GameObject:
   m_Component:
   - component: {fileID: 371115560}
   - component: {fileID: 371115561}
-  - component: {fileID: 371115562}
   - component: {fileID: 371115563}
   m_Layer: 0
   m_Name: Dialogue Manager
@@ -911,6 +910,7 @@ MonoBehaviour:
     stat: []
     statValue: 
   dialogueActive: 0
+  loadNextScene: 0
   animator: {fileID: 22608331}
   choiceAnimator: {fileID: 2077163209}
   nameText: {fileID: 1571013484}
@@ -927,21 +927,6 @@ MonoBehaviour:
   - {fileID: 2011147956}
   - {fileID: 573856595}
   sceneFade: {fileID: 833434459}
---- !u!114 &371115562
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 371115559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04f37352ed9cd7f439e8f50fcafca09f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keys: []
-  dialogues: []
-  allTriggers: []
 --- !u!114 &371115563
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1343,6 +1328,7 @@ MonoBehaviour:
     statValue: 
   autoDialogue: 0
   delayTime: 0
+  sceneTrigger: 0
 --- !u!61 &530036052
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1687,6 +1673,7 @@ MonoBehaviour:
     statValue: 
   autoDialogue: 0
   delayTime: 0
+  sceneTrigger: 0
 --- !u!1 &800577871
 GameObject:
   m_ObjectHideFlags: 0
@@ -2124,7 +2111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 271e0a3695871ca4790afe1d0d2d5c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueKey: TestKey1
+  dialogueKey: TestPastIntro
   dialogue:
     name: 
     sentences: []
@@ -2133,8 +2120,9 @@ MonoBehaviour:
     children: []
     stat: []
     statValue: 
-  autoDialogue: 0
+  autoDialogue: 1
   delayTime: 0.5
+  sceneTrigger: 0
 --- !u!4 &1016445904
 Transform:
   m_ObjectHideFlags: 0
@@ -2462,6 +2450,53 @@ Transform:
   - {fileID: 1729571847}
   m_Father: {fileID: 0}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1400998700
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1400998702}
+  - component: {fileID: 1400998701}
+  m_Layer: 0
+  m_Name: Dialogue Loader
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1400998701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400998700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04f37352ed9cd7f439e8f50fcafca09f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keys: []
+  dialogues: []
+  allTriggers: []
+--- !u!4 &1400998702
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400998700}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 273.77087, y: 79.03183, z: -2.7185986}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1533468390
 GameObject:
@@ -2977,6 +3012,7 @@ MonoBehaviour:
     statValue: 
   autoDialogue: 0
   delayTime: 0
+  sceneTrigger: 0
 --- !u!114 &1729571851
 MonoBehaviour:
   m_ObjectHideFlags: 0

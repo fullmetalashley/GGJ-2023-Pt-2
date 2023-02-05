@@ -31,8 +31,6 @@ public class DialogueLoader : MonoBehaviour
     {
         ParseKeys();
         SetAllTriggers();
-        
-        //Also at this point, search for any auto running dialogue.
     }
 
     public void SetAllTriggers()
@@ -44,10 +42,12 @@ public class DialogueLoader : MonoBehaviour
             trigger.SetTrigger();
         }
 
+        //Search for any auto-running dialogue and get that going.
         foreach (DialogueTrigger trigger in allTriggers)
         {
             if (trigger.autoDialogue)
             {
+                Debug.Log("Auto run found, starting now");
                 //Run this one NOW.
                 trigger.AutoRun();
             }
@@ -91,7 +91,6 @@ public class DialogueLoader : MonoBehaviour
                 }
             }
             //If childDivider is still 0, that means we do not have children.
-
             //First, send in the dialogue. Return an array of cleaned up sentences.
             string[] sentences = ProcessDialogueSentences(cleanDummy, childDivider);
             

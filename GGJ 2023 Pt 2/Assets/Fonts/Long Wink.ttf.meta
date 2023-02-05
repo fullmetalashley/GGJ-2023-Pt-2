@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 8c1c67ce8f7bdda4e951da8a9d906b9e
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Long Wink
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e4af4a71959909b49be901bcd0da26f9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
