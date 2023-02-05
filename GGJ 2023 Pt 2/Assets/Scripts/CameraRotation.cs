@@ -54,6 +54,7 @@ public class CameraRotation : MonoBehaviour
             underDesk = true;
             target = underDeskTransform;
         }
+        FindObjectOfType<ItemTracker>().ToggleColliders();
 
         rightArrow.SetActive(!underDesk);
         leftArrow.SetActive(!underDesk);

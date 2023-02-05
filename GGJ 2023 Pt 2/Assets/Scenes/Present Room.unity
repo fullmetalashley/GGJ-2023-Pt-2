@@ -373,7 +373,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &68479736
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1846,6 +1846,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasBeenClicked: 0
+  clickLocked: 0
 --- !u!114 &530036051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2225,6 +2226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasBeenClicked: 0
+  clickLocked: 0
 --- !u!65 &716278790
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2343,7 +2345,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3dfe768e1d010e049bc253f1328de527, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a7df75a9abfb9b846b9e7c5629f3e4fa, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3051,7 +3053,7 @@ GameObject:
   - component: {fileID: 1016445904}
   - component: {fileID: 1016445903}
   m_Layer: 0
-  m_Name: SceneStartDialogue
+  m_Name: Demo Opening 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3069,7 +3071,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 271e0a3695871ca4790afe1d0d2d5c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueKey: Present Scene 1 Player 1
+  dialogueKey: DemoOpening1
   dialogue:
     name: 
     sentences: []
@@ -3451,7 +3453,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1332236226
 Transform:
   m_ObjectHideFlags: 0
@@ -3672,7 +3674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8130921515361137296, guid: 39868262e399a4c48bf3739708613d2b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.9
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 8130921515361137296, guid: 39868262e399a4c48bf3739708613d2b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3897,6 +3899,7 @@ GameObject:
   - component: {fileID: 1629203103}
   - component: {fileID: 1629203102}
   - component: {fileID: 1629203106}
+  - component: {fileID: 1629203107}
   m_Layer: 0
   m_Name: Family Tree
   m_TagString: Untagged
@@ -3957,7 +3960,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629203100}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -4007,12 +4010,37 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629203100}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cd24462eaf7831a4e94a152334be72b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   hasBeenClicked: 0
+  clickLocked: 0
+--- !u!114 &1629203107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629203100}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 271e0a3695871ca4790afe1d0d2d5c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueKey: DemoTreeCarving
+  dialogue:
+    name: 
+    sentences: []
+    choices: []
+    dialogueKey: 
+    children: []
+    stat: []
+    statValue: 
+  autoDialogue: 0
+  delayTime: 0
+  sceneTrigger: 1
 --- !u!1 &1632116650
 GameObject:
   m_ObjectHideFlags: 0
@@ -4028,7 +4056,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1632116651
 Transform:
   m_ObjectHideFlags: 0
@@ -4206,6 +4234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasBeenClicked: 0
+  clickLocked: 0
 --- !u!114 &1729571850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4229,7 +4258,7 @@ MonoBehaviour:
     statValue: 
   autoDialogue: 0
   delayTime: 0
-  sceneTrigger: 1
+  sceneTrigger: 0
 --- !u!114 &1729571851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4454,7 +4483,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1881479301
 Transform:
   m_ObjectHideFlags: 0
@@ -4482,6 +4511,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1890569540}
   - component: {fileID: 1890569539}
+  - component: {fileID: 1890569541}
   m_Layer: 0
   m_Name: Item Manager
   m_TagString: Untagged
@@ -4504,8 +4534,10 @@ MonoBehaviour:
   allItems:
   - {fileID: 716278789}
   - {fileID: 1729571849}
-  - {fileID: 1629203106}
   dimColor: {r: 0, g: 1, b: 0.8971636, a: 0.08627451}
+  presentRoom: 1
+  seeFamilyTree: {fileID: 1890569541}
+  familyTree: {fileID: 1629203100}
 --- !u!4 &1890569540
 Transform:
   m_ObjectHideFlags: 0
@@ -4521,6 +4553,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1890569541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1890569538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 271e0a3695871ca4790afe1d0d2d5c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueKey: DemoSeeTree
+  dialogue:
+    name: 
+    sentences: []
+    choices: []
+    dialogueKey: 
+    children: []
+    stat: []
+    statValue: 
+  autoDialogue: 0
+  delayTime: 0
+  sceneTrigger: 0
 --- !u!1 &1926907740
 GameObject:
   m_ObjectHideFlags: 0
@@ -4709,6 +4765,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2005503086}
+  - component: {fileID: 2005503087}
   m_Layer: 5
   m_Name: Grandpa Letter
   m_TagString: Untagged
@@ -4738,6 +4795,30 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2005503087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2005503085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 271e0a3695871ca4790afe1d0d2d5c20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueKey: DemoOpening1
+  dialogue:
+    name: 
+    sentences: []
+    choices: []
+    dialogueKey: 
+    children: []
+    stat: []
+    statValue: 
+  autoDialogue: 0
+  delayTime: 0
+  sceneTrigger: 0
 --- !u!1 &2009010018
 GameObject:
   m_ObjectHideFlags: 0

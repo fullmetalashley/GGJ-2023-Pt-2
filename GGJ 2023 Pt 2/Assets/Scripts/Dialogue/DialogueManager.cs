@@ -30,6 +30,8 @@ public class DialogueManager : MonoBehaviour
 
     [Header("Scene Fade")] public Animator sceneFade;
 
+    public bool endGame;//TODO: remove for final, this is sloppy
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -149,6 +151,11 @@ public class DialogueManager : MonoBehaviour
             if (loadNextScene)
             {
                 StartCoroutine(DelaySceneLoad());
+            }
+
+            if (endGame)
+            {
+                FindObjectOfType<UIManager>().EndGame();
             }
         }
     }
