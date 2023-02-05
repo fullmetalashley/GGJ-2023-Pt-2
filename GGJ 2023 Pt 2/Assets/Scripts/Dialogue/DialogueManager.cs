@@ -42,6 +42,12 @@ public class DialogueManager : MonoBehaviour
     {
         dialogueActive = true;
         currentDialogue = dialogue;
+        
+        //If we're on the final dialogue of the past, load scene should be true.
+        if (dialogue.dialogueKey == "DemoPast10")
+        {
+            loadNextScene = true;
+        }
 
         animator.SetBool("isOpen", true);
         choiceAnimator.SetBool("isOpen", false);

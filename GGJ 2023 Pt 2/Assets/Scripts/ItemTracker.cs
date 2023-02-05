@@ -45,10 +45,12 @@ public class ItemTracker : MonoBehaviour
         }
         else
         {
+            /*
             //We're in the past
             //We need to trigger the cipher object, which will trigger the rest.
             falseBottom.GetComponent<MeshRenderer>().enabled = true;
             falseBottom.GetComponent<ClickDetection>().enabled = true;
+            */
         }
     }
 
