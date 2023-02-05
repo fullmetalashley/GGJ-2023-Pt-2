@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Present Room Scene 2.unity
     guid: cbc74d09f2f01424cadda7ec0f37f900
+  - enabled: 1
+    path: Assets/Scenes/Present Room 1.unity
+    guid: 6cba4b902462d9c4b904b0719c0101f6
   m_configObjects: {}
