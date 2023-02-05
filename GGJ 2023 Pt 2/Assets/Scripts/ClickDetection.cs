@@ -11,6 +11,8 @@ public class ClickDetection : MonoBehaviour
 
     public bool hasBeenClicked;
 
+    public bool clickLocked;
+
     public void Start()
     {
         theDialogue = FindObjectOfType<DialogueManager>();
@@ -24,11 +26,13 @@ public class ClickDetection : MonoBehaviour
     {
         if (theDialogue.dialogueActive) return;
         if (theUI.uiOpen) return;
+        if (clickLocked) return;
         
         if (trigger != null)
         {
             hasBeenClicked = true;
             DimOutline();
+            itemTracker.CheckForClicks();
             trigger.TriggerDialogue();
         }
         else

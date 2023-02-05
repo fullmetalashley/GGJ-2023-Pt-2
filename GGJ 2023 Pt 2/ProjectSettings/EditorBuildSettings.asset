@@ -13,5 +13,11 @@ EditorBuildSettings:
     guid: 29bf5727a17c1b24db413b84013b76fc
   - enabled: 1
     path: Assets/Scenes/Past Room.unity
-    guid: 77f837dd32ede044b9116cec36eae917
+    guid: ecfdfc33ed457ad4ea50747ebe7f565b
+  - enabled: 1
+    path: Assets/Scenes/Present Room Scene 2.unity
+    guid: cbc74d09f2f01424cadda7ec0f37f900
+  - enabled: 1
+    path: Assets/Scenes/Present Room 1.unity
+    guid: 6cba4b902462d9c4b904b0719c0101f6
   m_configObjects: {}

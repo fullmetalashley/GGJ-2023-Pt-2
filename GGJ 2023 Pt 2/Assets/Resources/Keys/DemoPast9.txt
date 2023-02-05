@@ -1,0 +1,11 @@
+DemoPast9
+
+You better stop, George.
+Twin or no, I'll have you out on the streets in a minute.
+Or--ha! You're kidding.
+A gun?
+Really?
+
+[[George: I don't want to! | DemoPast10]]
+
+Martin

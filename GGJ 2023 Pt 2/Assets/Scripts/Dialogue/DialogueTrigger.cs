@@ -15,8 +15,10 @@ public class DialogueTrigger : MonoBehaviour
 
     public bool sceneTrigger;
 
+    public bool endGame;
+    
     private DialogueManager theDialogue;
-
+    
     void Awake()
     {
         theDialogue = FindObjectOfType<DialogueManager>();
@@ -29,8 +31,10 @@ public class DialogueTrigger : MonoBehaviour
 
     public void TriggerDialogue()
     {
+        theDialogue.endGame = endGame;
         theDialogue.StartDialogue(dialogue);
         theDialogue.loadNextScene = sceneTrigger;
+        
     }
 
     public void AutoRun()
